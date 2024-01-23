@@ -36,8 +36,8 @@ class Main {
 	public ArrayList<String> solution(int n, String[] str){
 		ArrayList<String> answer=new ArrayList<>(); 
 		for(String x : str){
-			String tmp=new StringBuilder(x).reverse().toString();
-			answer.add(tmp);
+			String tmp=new StringBuilder(x).reverse().toString(); // StringBuilder 객체안에 여러가지 메서드 존재함. 그중에 reverse 메소드 사용
+			answer.add(tmp); // 뒤집어 진것들을 answer 이라는 array list 에 담아줘
 		}
 		return answer;
 	}
