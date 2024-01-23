@@ -1,5 +1,5 @@
 git에 올리는 방법
-echo "# port2023-vue" >> README.md
+echo "# CodingTest" >> README.md
 
 git init
 
