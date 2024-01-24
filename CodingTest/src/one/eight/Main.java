@@ -28,7 +28,7 @@ import java.util.*;
 class Main {	
 	public String solution(String s){
 		String answer="NO";
-		s=s.toUpperCase().replaceAll("[^A-Z]", "");
+		s=s.toUpperCase().replaceAll("[^A-Z]", ""); // replaceAll 해야 정규식 쓸수 있음 // replace 는 못쓰고 // ^ 부정
 		String tmp=new StringBuilder(s).reverse().toString();
 		if(s.equals(tmp)) answer="YES";
 		return answer;

@@ -28,11 +28,11 @@ class Main {
 		//int answer=0;
 		String answer="";
 		for(char x : s.toCharArray()){
-			//if(x>=48 && x<=57) answer=answer*10+(x-48);
+			//if(x>=48 && x<=57) answer=answer*10+(x-48);  // 아스키번호 '0' -> 48 , '9' -> 57
 			/*if(Character.isDigit(x)){
 				answer=answer*10+ Character.getNumericValue(x);
 			}*/
-			if(Character.isDigit(x)) answer+=x;
+			if(Character.isDigit(x)) answer+=x; // isDigit 숫자냐 물어보는거
 		}
 		return Integer.parseInt(answer);
 	}

@@ -32,7 +32,7 @@ import java.util.*;
 class Main {	
 	public String solution(String s){
 		String answer="";
-		s=s+" ";
+		s=s+" "; // for 문 비교할떄 index outofboundery 이런 에러 나오지 안도록 마지막 문자와 비교할 빈 문자 하나 추가
 		int cnt=1;
 		for(int i=0; i<s.length()-1; i++){
 			if(s.charAt(i)==s.charAt(i+1)) cnt++;
