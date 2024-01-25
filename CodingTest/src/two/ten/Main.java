@@ -47,18 +47,18 @@ package two.ten;
 
 import java.util.*;
 class Main {	
-	int[] dx={-1, 0, 1, 0};
-	int[] dy={0, 1, 0, -1};
+	int[] dx={-1, 0, 1, 0}; // 방향 배열
+	int[] dy={0, 1, 0, -1}; // 방향 배열
 	public int solution(int n, int[][] arr){
 		int answer=0;
 		for(int i=0; i<n; i++){
 			for(int j=0; j<n; j++){
 				boolean flag=true;
 				for(int k=0; k<4; k++){
-					int nx=i+dx[k];
-					int ny=j+dy[k];
-					if(nx>=0 && nx<n && ny>=0 && ny<n && arr[nx][ny]>=arr[i][j]){
-						flag=false;
+					int nx=i+dx[k]; // nx = 4방향을 보기위한 행 좌표 // -1  0  1  0
+					int ny=j+dy[k]; // ny = 4방향을 보기위한 열 좌표 //  0  1  0 -1  // 이 2개를 배열로 하면 상하좌우 체크가능
+					if(nx>=0 && nx<n && ny>=0 && ny<n && arr[nx][ny]>=arr[i][j]){ // arr[nx][ny]>=arr[i][j] -> 나보다 크거나 같은게 있으면 봉우리가 아니야
+						flag=false;                                               // nx>=0 && nx<n && ny>=0 && ny<n -> 경계선 처리 ArrayIndexOutOfBoundery Exception 
 						break;
 					}
 				}

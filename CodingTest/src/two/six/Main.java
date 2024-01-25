@@ -27,9 +27,9 @@ package two.six;
 import java.util.*;
 class Main {	
 	public boolean isPrime(int num){
-		if(num==1) return false;
+		if(num==1) return false; // 숫자가 1이면 소수가 아니니 false
 		for(int i=2; i<num; i++){
-			if(num%i==0) return false;
+			if(num%i==0) return false; // i 숫자는 num 의 약수 // 약수가 발견되면 소수가 아님
 		}
 		return true;
 	}
@@ -37,12 +37,12 @@ class Main {
 	public ArrayList<Integer> solution(int n, int[] arr){
 		ArrayList<Integer> answer = new ArrayList<>();
 		for(int i=0; i<n; i++){
-			int tmp=arr[i];
+			int tmp=arr[i]; // 1230
 			int res=0;
 			while(tmp>0){
-				int t=tmp%10;
-				res=res*10+t;
-				tmp=tmp/10;
+				int t=tmp%10; // 숫자를 10으로 나눈 나머지 = 1의자리 숫자  -> 0 
+				res=res*10+t; // 0 = 0 * 10 + 0  // 3 = 0 * 10 + 3   // 32 = 3 * 10 + 2 // 321 = 32 + 10 + 1
+				tmp=tmp/10; // 1의자리 제외한 나머지 앞에숫자 // 1230 // 123 // 12 // 1
 			}
 			if(isPrime(res)) answer.add(res);
 		}

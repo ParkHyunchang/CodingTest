@@ -1,7 +1,7 @@
 /*
 9. 격자판 최대합
 설명
-5*5 격자판에 아래롸 같이 숫자가 적혀있습니다.
+5*5 격자판에 아래와 같이 숫자가 적혀있습니다.
 
 --------------------------
 | 10 | 13 | 10 | 12 | 15 |
@@ -43,21 +43,21 @@ package two.nine;
 import java.util.*;
 class Main {	
 	public int solution(int n, int[][] arr){
-		int answer=-2147000000;
-		int sum1=0, sum2=0;
+		int answer=-2147000000; // 정수값중 가장 작은걸로 초기화 // 최대갑 찾아야 하는것이니
+		int sum1=0, sum2=0;  // num1 행의 합  // num2 열의 합
 		for(int i=0; i<n; i++){
 			sum1=sum2=0;
 			for(int j=0; j<n; j++){
-				sum1+=arr[i][j];
-				sum2+=arr[j][i];
+				sum1+=arr[i][j];  // i행의 합
+				sum2+=arr[j][i];  // i열의 합
 			}
 			answer=Math.max(answer, sum1);
 			answer=Math.max(answer, sum2);
 		}
 		sum1=sum2=0;
 		for(int i=0; i<n; i++){
-			sum1+=arr[i][i];
-			sum2+=arr[i][n-i-1];
+			sum1+=arr[i][i]; // 대각선 합1
+			sum2+=arr[i][n-i-1]; // 대각선 합2
 		}
 		answer=Math.max(answer, sum1);
 		answer=Math.max(answer, sum2);

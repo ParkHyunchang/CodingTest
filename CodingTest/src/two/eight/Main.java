@@ -31,6 +31,8 @@ class Main {
 			int cnt=1;
 			for(int j=0; j<arr.length; j++){
 				if(arr[j]>arr[i]) cnt++;
+				//System.out.println("arr["+i+"] : "+arr[i]);
+				//System.out.println("arr["+j+"] : "+arr[j]);
 			}
 			answer[i]=cnt;
 		}

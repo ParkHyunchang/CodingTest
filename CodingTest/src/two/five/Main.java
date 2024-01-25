@@ -29,7 +29,7 @@ class Main { // 에라토스테네스 체 방법이 소수를 구하는 가장 �
 		for(int i=2; i<=n; i++){
 			if(ch[i]==0){ // 0이면 배수가 없다는 얘기이니 소수
 				//System.out.printf("%d ", i); 소수인 인덱스 출력
-				cnt++; // 소스 카운드
+				cnt++; // 소수 개수 카운드
 				for(int j=i; j<=n; j=j+i) ch[j]=1; // 배수 체크
 			}
 		}
