@@ -41,10 +41,10 @@ class Main {
 		for(int i=1; i<=n; i++){
 			for(int j=1; j<=n; j++){
 				int cnt=0;
-				for(int k=0; k<m; k++){
+				for(int k=0; k<m; k++){ // 0번 테스트 부터 m 번 테스트까지
 					int pi=0, pj=0;
-					for(int s=0; s<n; s++){
-						if(arr[k][s]==i) pi=s;
+					for(int s=0; s<n; s++){ // 0등부터 3등까지
+						if(arr[k][s]==i) pi=s; // pi 는 i번 학생의 등수 // k번째 테스트에서 3번 학생(i)의 등수는 0이고, 1번 학생(j)의 등수는 2등
 						if(arr[k][s]==j) pj=s;
 					}
 					if(pi<pj) cnt++;

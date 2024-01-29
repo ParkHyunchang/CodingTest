@@ -61,19 +61,19 @@ import java.util.*;
 class Main {	
 	public int solution(int n, int[][] arr){
 		int answer=0, max=0;
-		for(int i=1; i<=n; i++){
+		for(int i=1; i<=n; i++){ // i 는 학생번호
 			int cnt=0;
-			for(int j=1; j<=n; j++){
-				for(int k=1; k<=5; k++){
-					if(arr[i][k]==arr[j][k]){
+			for(int j=1; j<=n; j++){ // i번 학생과 같은반에 있던 j는 몇명
+				for(int k=1; k<=5; k++){ // 1학년 때 부터 5학년 떄 까지
+					if(arr[i][k]==arr[j][k]){ //i번 학생의 k번 학년의 반과 j번 학생의 k번 학년의 반이 같으면
 						cnt++;
-						break;
+						break;  // j 라는 학생을 한번만 카운팅 해야하니 break // 한번 맞으면 cnt 올리고 if 문 탈출
 					}
 				}
 			}
 			if(cnt>max){
 				max=cnt;
-				answer=i;
+				answer=i; // 최대값을 만드는 i번 학생이 답
 			}
 		}
 		return answer;
