@@ -17,6 +17,6 @@ git push -u origin main
 
 git add .
 
-git commit -m "😤 뷰 첫 커밋 완료"
+git commit -m "첫 커밋 완료"
 
 git push -u origin main
